@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomeController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="180.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton prefHeight="66.0" prefWidth="200.0" text="View Stored Comments">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton prefHeight="65.0" prefWidth="200.0" text="translaterate">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="LogOut" onAction="#OnLogOutBtnClicked" prefHeight="37.0" prefWidth="121.0" text="Log out">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="40.0" right="10.0" top="40.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="400.0" prefWidth="194.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Label alignment="CENTER" layoutX="89.0" layoutY="14.0" prefHeight="66.0" prefWidth="222.0" text="Welcom" />
+            <PieChart layoutX="186.0" layoutY="110.0" prefHeight="179.0" prefWidth="190.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
