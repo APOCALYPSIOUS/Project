@@ -32,16 +32,22 @@ public class SignInController {
     @FXML
     void OnRegisterBtnClicked(ActionEvent event) throws SQLException, IOException {
         User user = new User(username.getText(),password.getText());
-        try{
-            user.addUser();
-            accountCreated.setText("Account Created");
-            usernameNotExist.setVisible(false);
+        if(user.getName().equals("") && user.getPassword().equals("")){
+            usernameNotExist.setText("enter your username and password");
+        }
+        else{
+            try{
+                user.addUser();
+                accountCreated.setText("Account Created");
+                usernameNotExist.setVisible(false);
 
 
+            }
+            catch (Exception e ){
+                usernameNotExist.setText("username already exist");
+            }
         }
-        catch (Exception e ){
-            usernameNotExist.setText("username already exist");
-        }
+
 
 
 
