@@ -11,6 +11,7 @@ module com.example.demo {
     requires eu.hansolo.tilesfx;
     requires com.jfoenix;
     requires java.sql;
+    requires org.jetbrains.annotations;
 
     opens com.example.demo to javafx.fxml;
     exports com.example.demo;

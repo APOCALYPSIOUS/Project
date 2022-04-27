@@ -11,6 +11,12 @@ import java.sql.SQLException;
 
 public class LogInController {
 
+    public static String user;
+    public void setUser(String user){
+        this.user =user;
+
+    }
+
     @FXML
     private JFXButton LogIn;
 
@@ -31,6 +37,7 @@ public class LogInController {
         Boolean auth =User.checkUserExist(username.getText(),password.getText());
         System.out.println(auth);
         if(auth == true){
+            setUser(username.getText());
             Main m = new Main();
             m.changeScene("Home.fxml");
 

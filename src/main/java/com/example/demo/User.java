@@ -31,20 +31,17 @@ public class User {
         return name;
     }
     public static boolean  checkUserExist(String name, String password) throws SQLException {
+
         ResultSet result = DBConnector.executeQuery(String.format("select exists(select * from users where username='%s' && password='%s');",name,password));
-        if((int) result.getObject(1)==1){
-            return true;
-        }
-        else{
-            return false;
-        }
+            return (int) result.getObject(1)==1 ;//?true : false;
+
 
 
     }
 
     public void addUser() throws SQLException {
 
-            DBConnector.addItem(String.format("INSERT INTO users VALUES ( '%s', '%s');",this.name,this.password));
+            DBConnector.updateQuery(String.format("INSERT INTO users VALUES ( '%s', '%s');",this.name,this.password));
 
 
     }
@@ -52,7 +49,7 @@ public class User {
 
     public static void main(String[] args) throws SQLException {
         User user = new User("walid","123");
-        user.addUser();
+        checkUserExist("ayoub","123");
 
 
     }
