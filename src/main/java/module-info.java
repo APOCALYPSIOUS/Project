@@ -12,6 +12,11 @@ module com.example.demo {
     requires com.jfoenix;
     requires java.sql;
     requires org.jetbrains.annotations;
+    requires org.jsoup;
+    requires google.api.client;
+    requires com.google.api.client;
+    requires com.google.api.client.json.gson;
+    requires google.api.services.youtube.v3.rev222;
 
     opens com.example.demo to javafx.fxml;
     exports com.example.demo;

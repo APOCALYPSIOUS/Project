@@ -79,6 +79,12 @@ public class HomeController implements Initializable {
 
     }
     @FXML
+    public void OnFetchBtnClicked(ActionEvent event) throws IOException {
+        Main m = new Main();
+        m.changeScene("transliterate.fxml");
+
+    }
+    @FXML
     public void showstatisticspage(ActionEvent event) throws IOException {
         Main m= new Main();
         m.changeScene("Statistics.fxml");
@@ -88,13 +94,13 @@ public class HomeController implements Initializable {
         Mapper trans = new Mapper();
 
         transliteratedtextarea.setText(trans.translaterate(gettext().toString()));
-        Comment c = new Comment(gettext().toString(),"non","non",LogInController.user);
+        Comment c = new Comment(gettext().toString(),"non","non",LogInController.user1);
         c.storeComment();
     }
     @FXML
     public void showtransliteratemenu(ActionEvent event) throws IOException{
         table_1.setVisible(false);
-        transliteration_tablebtn.setVisible(false);
+        //transliteration_tablebtn.setVisible(false);
         transliteratedirectbtn.setVisible(true);
         texttotransliteratearea.setVisible(true);
         transliteratedtextarea.setVisible(true);
@@ -105,6 +111,13 @@ public class HomeController implements Initializable {
 
     @FXML
     public void showtable(ActionEvent event) throws IOException, SQLException {
+        table_1.getItems().clear();
+        table_1.setVisible(true);
+        transliteratedirectbtn.setVisible(false);
+        texttotransliteratearea.setVisible(false);
+        transliteratedtextarea.setVisible(false);
+        arrowimg2.setVisible(false);
+        arrowimg1.setVisible(false);
 
         try {
 
@@ -138,7 +151,7 @@ public class HomeController implements Initializable {
 
         table_1.setItems(data);
 
-        transliteration_tablebtn.setVisible(false);
+
     }
 
     public ObservableList<Comment> data = FXCollections.observableArrayList();
@@ -146,7 +159,7 @@ public class HomeController implements Initializable {
 
 
     public void displayusername() {
-        username_home.setText(LogInController.user);
+        username_home.setText(LogInController.user1);
     }
 
     @Override

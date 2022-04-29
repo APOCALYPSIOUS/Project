@@ -37,15 +37,15 @@
                   </LinearGradient>
                </stroke>
             </Rectangle>
-            <Button fx:id="statisticsbtn" layoutX="33.0" layoutY="371.0" mnemonicParsing="false" onAction="#showstatisticspage" prefHeight="54.0" prefWidth="166.0" style="-fx-background-color: #8daec9;" text="Statistics">
+            <Button fx:id="statisticsbtn" layoutX="33.0" layoutY="389.0" mnemonicParsing="false" onAction="#showstatisticspage" prefHeight="54.0" prefWidth="166.0" style="-fx-background-color: #8daec9;" text="Statistics">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
-            <Button fx:id="fetchdatabtn" layoutX="33.0" layoutY="281.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="166.0" style="-fx-background-color: #8daec9;" text="Fetch data from website">
+            <Button fx:id="fetchdatabtn" layoutX="33.0" layoutY="324.0" mnemonicParsing="false" onAction="#OnFetchBtnClicked" prefHeight="54.0" prefWidth="166.0" style="-fx-background-color: #8daec9;" text="Fetch data from website">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Button>
-            <Button fx:id="logoutbtn" layoutX="74.0" layoutY="455.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #b36868;" text="LogOut">
+            <Button fx:id="logoutbtn" layoutX="74.0" layoutY="456.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #b36868;" text="LogOut">
                <font>
                   <Font name="Calibri Bold" size="15.0" />
                </font>
@@ -57,10 +57,11 @@
                   <Font name="Century" size="25.0" />
                </font>
             </Label>
-            <Button fx:id="transliteratebtn" layoutX="33.0" layoutY="193.0" mnemonicParsing="false" onAction="#showtransliteratemenu" prefHeight="54.0" prefWidth="166.0" style="-fx-background-color: #8daec9;" text="Transliterate">
+            <Button fx:id="transliteratebtn" layoutX="33.0" layoutY="259.0" mnemonicParsing="false" onAction="#showtransliteratemenu" prefHeight="54.0" prefWidth="166.0" style="-fx-background-color: #8daec9;" text="Transliterate">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
+            <Button fx:id="transliteration_tablebtn" defaultButton="true" layoutX="33.0" layoutY="189.0" mnemonicParsing="false" onAction="#showtable" prefHeight="54.0" prefWidth="166.0" text="View Table" />
          </children>
       </Pane>
       <Label layoutX="255.0" prefHeight="61.0" prefWidth="419.0" text="Transliteration Application">
@@ -93,7 +94,6 @@
             <TableColumn fx:id="url" prefWidth="153.99993896484375" text="url" />
          </columns>
       </TableView>
-      <Button fx:id="transliteration_tablebtn" defaultButton="true" layoutX="388.0" layoutY="60.0" mnemonicParsing="false" onAction="#showtable" prefHeight="38.0" prefWidth="100.0" text="View Table" />
       <Button fx:id="transliteratedirectbtn" layoutX="389.0" layoutY="254.0" mnemonicParsing="false" onAction="#transliteratedirect" prefHeight="38.0" prefWidth="112.0" text="Transliterate" textOverrun="CENTER_ELLIPSIS" visible="false">
          <font>
             <Font name="Arial Narrow Bold" size="16.0" />

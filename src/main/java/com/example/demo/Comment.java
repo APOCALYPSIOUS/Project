@@ -12,6 +12,7 @@ public class Comment {
     private String url;
     private static int id = 53;
     private String user;
+    private String translateration;
 
     public String getUser() {
         return this.user;
@@ -27,6 +28,14 @@ public class Comment {
         setUrl(url);
         setUser(user);
         setStoredId();
+        setTranslateration(comment);
+
+
+    }
+
+    public void setTranslateration(String comment) {
+        Mapper m = new Mapper();
+        this.translateration=m.translaterate(comment);
     }
 
     public String getComment() {
@@ -59,6 +68,10 @@ public class Comment {
 
     public static void setId(int id) {
         Comment.id = id;
+    }
+
+    public String getTranslateration() {
+        return this.translateration;
     }
 
     public static ArrayList<Comment> geCommentsByUser(String user) throws SQLException { // return list of comments(author,comment,url)
@@ -104,7 +117,7 @@ public class Comment {
 //                        "insert into comments values('%s','%s','%s','%s','%s')",
 //                        id, commentList.get(i).getUrl(), commentList.get(i).getComment(), commentList.get(i).getUser(),
 //                        commentList.get(i).getAuteur()));
-                DBConnector.executeQuery(String.format(
+                DBConnector.updateQuery(String.format(
                         "insert into comments values('%s','%s','%s','%s','%s')",
                         id, commentList.get(i).getUrl(), commentList.get(i).getComment(), commentList.get(i).getUser(),
                         commentList.get(i).getAuteur()));
