@@ -44,9 +44,6 @@ public class TransliterateController implements Initializable{
     private TextField urlText;
 
     @FXML
-    private Button validate;
-
-    @FXML
     private Button back;
 
     @FXML
@@ -70,7 +67,7 @@ public class TransliterateController implements Initializable{
             foru=commentList;
             author.setCellValueFactory(new PropertyValueFactory<Comment,String>("auteur"));
             comment.setCellValueFactory(new PropertyValueFactory<Comment,String>("comment"));
-            //transliteration.setCellValueFactory(new PropertyValueFactory<Comment,String>("translateration"));
+            transliteration.setCellValueFactory(new PropertyValueFactory<Comment,String>("translateration"));
             ObservableList<Comment> oList;
             oList = FXCollections.observableArrayList(foru);
             resultTable.setItems(oList);
@@ -87,6 +84,7 @@ public class TransliterateController implements Initializable{
 
                 author.setCellValueFactory(new PropertyValueFactory<Comment,String>("auteur"));
                 comment.setCellValueFactory(new PropertyValueFactory<Comment,String>("comment"));
+                transliteration.setCellValueFactory(new PropertyValueFactory<Comment,String>("translateration"));
                 ObservableList<Comment> oList;
                 oList = FXCollections.observableArrayList(foru);
                 resultTable.setItems(oList);

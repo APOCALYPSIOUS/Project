@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import org.jetbrains.annotations.NotNull;
+
 
 import java.sql.*;
 
@@ -31,7 +31,7 @@ public class DBConnector {
 
 
     }
-    public static @NotNull ResultSet executeQuery(String Query) throws SQLException {
+    public static  ResultSet executeQuery(String Query) throws SQLException {
         Connection connection = DBConnector.createConnection();
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement

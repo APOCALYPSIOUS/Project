@@ -144,8 +144,8 @@ public class HomeController implements Initializable {
         }
 
 //        id.setCellValueFactory(new PropertyValueFactory<Comment, Integer>("id"));
-        user.setCellValueFactory(new PropertyValueFactory<Comment, String>("user"));
-        author.setCellValueFactory(new PropertyValueFactory<Comment, String>("auteur"));
+        author.setCellValueFactory(new PropertyValueFactory<Comment, String>("user"));
+        user.setCellValueFactory(new PropertyValueFactory<Comment, String>("auteur"));
         comment.setCellValueFactory(new PropertyValueFactory<Comment, String>("comment"));
         url.setCellValueFactory(new PropertyValueFactory<Comment ,String>("url"));
 
